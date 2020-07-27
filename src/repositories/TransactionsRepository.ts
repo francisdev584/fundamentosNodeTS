@@ -27,6 +27,7 @@ class TransactionsRepository {
     // TODO
     const balance = this.transactions.reduce(
       (acumulator, transaction) => {
+        // eslint-disable-next-line no-param-reassign
         acumulator[transaction.type] += transaction.value;
         return acumulator;
       },
